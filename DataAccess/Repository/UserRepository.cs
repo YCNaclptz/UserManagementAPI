@@ -37,7 +37,6 @@ namespace DataAccess.Repository
             if (gender.HasValue) {
                 query = query.Where(user => user.Gender == (Gender)gender);
             }
-            query.Include("Location");
             return query;
         }
 
